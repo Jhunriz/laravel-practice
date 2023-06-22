@@ -27,6 +27,7 @@ class UserController extends Controller
 
     public function show($id)
     {
+        // using the ->with it pass the the from the user 
         return view('user')
             ->with('name', 'Jhunriz Lalata')
             ->with('age', 23)
