@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+
+    public function table(){
+
+        return view('user');
+    }
+
     public function index()
     {
         return 'Hello from UserController';

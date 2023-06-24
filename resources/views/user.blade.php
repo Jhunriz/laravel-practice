@@ -8,10 +8,13 @@
 </head>
 <body>
     {{-- using the code {{$data['name']}} can call the value in to User --}}
+    
     {{-- also using the ->with you can use the code {{$name}} to show data at UserController --}}
     <p> {{$name}}</p> 
     <p>{{$age}}</p>
     <p>{{$email}}</p>
     <p>{{$id}}</p>
+
+    
 </body>
 </html>
