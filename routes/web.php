@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
@@ -15,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [StudentController::class, 'sample']);
 
 
 // Route::get('/user', [UserController::class, 'index']);  //call the public function index at UserController.php
@@ -25,5 +24,9 @@ Route::get('/', function () {
 Route::get('/user', [UserController::class, 'index'])->name('login');
 
 Route::get('/user/{id}', [UserController::class, 'show']); // call the public function show at UserController.php
+
+Route::get('/user/{id}', [StudentController::class, 'sample']);
+
+
 
 // Route::get('/user/{id}', [UserController::class, 'show'])->middleware('auth');
