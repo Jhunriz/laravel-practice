@@ -31,9 +31,16 @@ class StudentController extends Controller
         //     ->groupBy('gender')
         //     ->get();
 
-        $data = Students::where('id', 100)->firstOrFail()->get();
+        // $result = compact('data');
+
+        // $data = Students::where('id', 100)->firstOrFail()->get();
 
 
-        return view('students.index', ['students' => $data]);
+        return view('students.index'); // in this line of code get the value of student.view at AppServiceProvider.php
+    }
+    public function show($id)
+    {
+        $data = Students::findOrFail($id);
+        return view('Students.index', ['students' => $data]);
     }
 }
