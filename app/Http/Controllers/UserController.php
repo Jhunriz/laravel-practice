@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 
 class UserController extends Controller
 {
 
-    public function table(){
+    public function table()
+    {
 
         return view('user');
     }
@@ -39,5 +41,33 @@ class UserController extends Controller
             ->with('age', 23)
             ->with('email', 'jhunriz14@gmail.com')
             ->with('id', $id);
+    }
+
+    public function create()
+    {
+        if (View::exists('user.login')) {
+            return view('user.login');
+        } else {
+            return abort(404);
+        }
+    }
+
+    // public function login()
+    // {
+    //     // return view('user.create');
+    //     if (View::exists('user.login')) {
+    //         return view('user.login');
+    //     } else {
+    //         return abort(404);
+    //     }
+    // }
+
+    public function register()
+    {
+        if (View::exists('user.register')) {
+            return view('user.register');
+        } else {
+            return abort(404);
+        }
     }
 }
