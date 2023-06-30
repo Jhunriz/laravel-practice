@@ -1,7 +1,13 @@
+{{-- @dd(auth()->user()->name) --}}
+
 @include('partials.__header')
 <x-navbar />
+
+
+
 <header class="max-w-lg mx-auto mt-24">
     <h1 class="text-4xl font-bold text-black text-center">{{ $title }}</h1>
+    <x-message />
 </header>
 <main class="bg-white max-w-4xl mx-auto p-8 my-10 rounded-lg shadow-2xl">
     <section>
