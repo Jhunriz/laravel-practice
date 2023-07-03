@@ -26,10 +26,12 @@ use Illuminate\Support\Facades\Route;
 // destroy - delete
 
 Route::get('/', [StudentController::class, 'sample']);
-Route::get('/login', [UserController::class, 'create']);
+Route::get('/login', [UserController::class, 'login']);
+Route::post('/login/process', [UserController::class, 'process']);
 Route::get('/register', [UserController::class, 'register']);
+Route::post('/logout', [UserController::class, 'logout']);
 
-
+Route::post('/store', [UserController::class, 'store']);
 
 
 

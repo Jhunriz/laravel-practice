@@ -1,6 +1,6 @@
 <nav class="bg-gray-800 text-white border-gray-200 dark:bg-gray-900 fixed w-full top-0 z-20 left-0">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" class="flex items-center">
+        <a href="/" class="flex items-center">
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Student System</span>
         </a>
         <button data-collapse-toggle="navbar-default" type="button"
