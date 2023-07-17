@@ -86,18 +86,6 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        // $validated = $request->validate([
-        //     "name" => ['required', 'min:4'],
-        //     "email" => ['required', 'email', Rule::unique('users', 'email')],
-        //     "password" => 'required|confirmed|min:6'
-        // ]);
-        // // $validated['password'] = Hash::make($validated['password']); //other code for validation
-        // $validated['password'] = bcrypt($validated['password']);
-
-        // $user = User::create($validated);
-
-        // auth()->login($user);
-
         $validated = $request->validate([
             "name" => ['required', 'min:4'],
             "email" => ['required', 'email', Rule::unique('users', 'email')],
@@ -122,19 +110,6 @@ class UserController extends Controller
         return redirect('/')->with('message', 'awit'); //return to the localhost:8000 or landing page;
     }
 
-    // public function process(Request $request)
-    // {
-    //     $validated = $request->validate([
-    //         "email" => ['required', 'email', Rule::unique('users', 'email')],
-    //         "password" => 'required'
-    //     ]);
-
-    //     if (auth()->attempt($validated)) {
-    //         $request->session()->regenerate();
-
-    //         return redirect('/')->with('message', 'Welcome Back!');
-    //     }
-    // }
 
     public function process(Request $request)
     {
